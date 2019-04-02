@@ -1,0 +1,2 @@
+class ListingRoute < ApplicationRecord
+end
