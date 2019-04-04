@@ -1,6 +1,6 @@
 class ListingRoute < ApplicationRecord
 
-  belongs_to :listings
-  belongs_to :routes
+  belongs_to :listing
+  belongs_to :route
 
 end

@@ -16,7 +16,18 @@ Rails.application.routes.draw do
 
      #routes
 
+     get "/routes" => "routes#index"
+     get "/routes/:id" => "routes#show"
+     post "/routes" => "routes#create"
+     patch "/routes/:id" => "routes#update"
+     delete "/routes/:id" => "routes#destroy"
 
      #listing_route
+
+     get "/listings_routes" => "listings_routes#index"
+     get "/listings_routes/:id" => "listings_routes#show"
+     post "/listings_routes" => "listings_routes#create"
+     patch "/listings_routes/:id" => "listings_routes#update"
+     delete "/listings_routes/:id" => "listings_routes#destroy"
 
 end
