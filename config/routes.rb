@@ -13,4 +13,10 @@ Rails.application.routes.draw do
      post "/listings" => "listings#create"
      patch "/listings/:id" => "listings#update"
      delete "/listings/:id" => "listings#destroy"
+
+     #routes
+
+
+     #listing_route
+
 end

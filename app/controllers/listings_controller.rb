@@ -4,21 +4,33 @@ class ListingsController < ApplicationController
     @listings = Listing.all
     render "index.json.jbuilder"
   end
+  
 
   def show
     @listing = Listing.find_by_id(params["id"])
     render "show.json.jbuilder"
   end
 
+
   def create
-    @listing = Listing.create(
+
+    @listing = Listing.new(
       address: params["address"],
       description: params["description"],
       user_id: params["user_id"]
       )
-
-    render "show.json.jbuilder"
+    if @listing.save
+      @date_range = DateRange.create!(
+        start_date: params["start_date"],
+        end_date: params["end_date"],
+        listing_id: @listing.id
+        )
+      render "show.json.jbuilder"
+    else
+      render json: {errors: @listing.errors.full_messages}, status: 422
+    end
   end
+
 
   def update
     @listing = Listing.find_by_id(params["id"])
