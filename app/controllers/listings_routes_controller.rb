@@ -1,5 +1,5 @@
 class ListingsRoutesController < ApplicationController
-
+  # before_action: authenticate_user!
 
   def index
     @listing_routes = ListingRoute.all
@@ -18,7 +18,7 @@ class ListingsRoutesController < ApplicationController
   def create
     @listing_route = ListingRoute.new(
       listing_id: params["id"],
-      route_id: params["id"]
+      route_id: 10
       )
     @listing_route.save
 

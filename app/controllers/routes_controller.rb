@@ -1,5 +1,6 @@
 class RoutesController < ApplicationController
 
+
   def index
     @routes = Route.all
     render "index.json.jbuilder"
@@ -13,7 +14,12 @@ class RoutesController < ApplicationController
   def create
     @route = Route.create(
       date: params["date"],
-      user_id: current_user.id
+      user_id: 1
+      )
+    if @route.save
+     @listing_route = ListingRoute.create!(
+      listing_id: params["id"],
+      route_id: @route.id
       )
 
     render "show.json.jbuilder"

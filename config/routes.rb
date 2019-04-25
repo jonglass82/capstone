@@ -3,6 +3,7 @@ Rails.application.routes.draw do
      #users
 
      get "/users" => "users#index"
+     get "/user/current_user" => "users#show_current_user"
      post "/users" => "users#create"
      post "/sessions" => "sessions#create"
 

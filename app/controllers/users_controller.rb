@@ -24,5 +24,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def show_current_user
+    @user = current_user
+    render "show.json.jbuilder"
+  end
+
 end
 
