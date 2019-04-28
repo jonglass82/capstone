@@ -12,14 +12,10 @@ class RoutesController < ApplicationController
   end
 
   def create
-    @route = Route.create(
+
+    @route = Route.create!(
       date: params["date"],
-      user_id: 1
-      )
-    if @route.save
-     @listing_route = ListingRoute.create!(
-      listing_id: params["id"],
-      route_id: @route.id
+      user_id: current_user.id
       )
 
     render "show.json.jbuilder"

@@ -16,11 +16,10 @@ class ListingsRoutesController < ApplicationController
 
 
   def create
-    @listing_route = ListingRoute.new(
-      listing_id: params["id"],
-      route_id: 10
+    @listing_route = ListingRoute.create!(
+      listing_id: params["listing_id"],
+      route_id: params["route_id"]
       )
-    @listing_route.save
 
     render "show.json.jbuilder"
   end
