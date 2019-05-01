@@ -18,7 +18,10 @@ class ListingsController < ApplicationController
     @listing = Listing.new(
       address: params["address"],
       description: params["description"],
-      user_id: params["user_id"]
+      city: params["city"],
+      state: params["state"],
+      zip_code: params["zip_code"],
+      user_id: current_user.id
       )
     if @listing.save
       @date_range = DateRange.create!(
