@@ -21,14 +21,12 @@ class ListingsController < ApplicationController
       city: params["city"],
       state: params["state"],
       zip_code: params["zip_code"],
-      user_id: current_user.id
+      user_id: current_user.id,
+      date: params["date"]
       )
+
     if @listing.save
-      @date_range = DateRange.create!(
-        start_date: params["start_date"],
-        end_date: params["end_date"],
-        listing_id: @listing.id
-        )
+
       render "show.json.jbuilder"
     else
       render json: {errors: @listing.errors.full_messages}, status: 422
