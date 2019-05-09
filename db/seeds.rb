@@ -1,8 +1,5 @@
 # User.create(first_name:"Jon", last_name:"Glass",email:"jon@email.com",username:"jonglass1982",password_digest:"password")
 # User.create(first_name:"Ron", last_name:"Jameson",email:"ron@email.com",username:"rj1956",password_digest:"password")
-# User.create(first_name:"Brianna", last_name:"Kozciosko",email:"Bri@email.com",username:"bribri1992",password_digest:"password")
-# User.create(first_name:"Jenna", last_name:"Smith",email:"jen@email.com",username:"jsmith55",password_digest:"password")
-# User.create(first_name:"Pete", last_name:"Lucas",email:"pete@email.com",username:"lucasp",password_digest:"password")
 
 
 # Listing.create(address:"549 Camanito Way",description:"Lots of old stuff",user_id:1 )
@@ -18,9 +15,9 @@
 
 # Route.create!(date: "5/1",user_id: 1)
       
-ListingRoute.create!(listing_id: 1,route_id: 1)
-ListingRoute.create!(listing_id: 2,route_id: 1)
-ListingRoute.create!(listing_id: 3,route_id: 1)
+# ListingRoute.create!(listing_id: 1,route_id: 1)
+# ListingRoute.create!(listing_id: 2,route_id: 1)
+# ListingRoute.create!(listing_id: 3,route_id: 1)
 
 
 

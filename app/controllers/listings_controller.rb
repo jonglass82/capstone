@@ -1,8 +1,9 @@
 class ListingsController < ApplicationController
-  before_action :authenticate_user, except: [:index, :show]
+  # before_action :authenticate_user, except: [:index, :show]
 
   def index
     @listings = Listing.all
+
     render "index.json.jbuilder"
   end
   
@@ -22,7 +23,8 @@ class ListingsController < ApplicationController
       state: params["state"],
       zip_code: params["zip_code"],
       user_id: current_user.id,
-      date: params["date"]
+      date: params["date"],
+      image: params[:image]
       )
 
     if @listing.save
@@ -52,6 +54,7 @@ class ListingsController < ApplicationController
 
     render "index.json.jbuilder"
   end
+
 
 end
 

@@ -11,7 +11,7 @@ class RoutesController < ApplicationController
   def show
     @route = Route.find_by_id(params["id"])
     
-    render "show.json,jbuilder"
+    render "show.json.jbuilder"
   end
 
   def create
