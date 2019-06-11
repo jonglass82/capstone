@@ -13,7 +13,12 @@
 # Listing.create(address:"11323 Olssen Pass",description:"Tools, carpenter's stuff, auto stuff.",user_id:5 )
 # Listing.create(address:"580 Holy Oak",description:"Everything must go today",user_id:6 )
 
-# Route.create!(date: "5/1",user_id: 1)
+Route.create!(date: "5/11/2019",user_id: 1)
+Route.create!(date: "5/18/2019",user_id: 1)
+Route.create!(date: "5/25/2019",user_id: 1)
+Route.create!(date: "6/2/2019",user_id: 1)
+Route.create!(date: "6/10/2019",user_id: 1)
+Route.create!(date: "6/18/2019",user_id: 1)
       
 # ListingRoute.create!(listing_id: 1,route_id: 1)
 # ListingRoute.create!(listing_id: 2,route_id: 1)
