@@ -31,4 +31,10 @@ Rails.application.routes.draw do
      patch "/listings_routes/:id" => "listings_routes#update"
      delete "/listings_routes/:id" => "listings_routes#destroy"
 
+
+
+
+     get "/*path" => proc { [200, {}, [ActionView::Base.new.render(file: 'public/index.html')]] } 
+
+
 end
